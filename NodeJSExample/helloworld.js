@@ -1,2 +1,2 @@
-let name= "Brighton Grow";
+var name= "Brighton Grow";
 console.log("Hello," +name+"!");
