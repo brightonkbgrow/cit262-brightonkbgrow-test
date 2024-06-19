@@ -45,4 +45,3 @@ jobs:
           subject-name: brightonkbgrow/cit262-brightonkbgrow-bb
           subject-digest: ${{ steps.push.outputs.digest }}
           push-to-registry: true
-
