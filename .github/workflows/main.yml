@@ -1,11 +1,11 @@
 name: Publish Docker image
 
 on:
-  pull_request:
-    branches: 
+  push:
+    branches:
       - main
-    types:
-      - closed
+  pull_request:
+    types: [closed]
 env:
   REPO_NAME: brightonkbgrow/cit262-brightonkbgrow-bb
 
