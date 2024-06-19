@@ -4,6 +4,7 @@
   "description": "I think its the NodeJS",
   "main": "index.js",
   "scripts": {
+    "test": "jest",
     "hello": "node helloworld.js"
   },
   "repository": {
@@ -11,5 +12,9 @@
     "url": "cit262-brightonkbgrow-test"
   },
   "author": "Brighton Grow",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
 }
+
