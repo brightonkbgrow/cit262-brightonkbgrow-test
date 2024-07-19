@@ -4,5 +4,5 @@ function forEach(items, callback) {
 	}
   }
   
-  module.exports = { forEach };
+  module.exports = forEach;
   
