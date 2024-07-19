@@ -24,10 +24,5 @@
   },
   "babel": {
     "presets": ["@babel/preset-env"]
-  },
-  "jest": {
-    "transform": {
-      "^.+\\.js$": "babel-jest"
-    }
   }
 }
