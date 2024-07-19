@@ -1,4 +1,4 @@
-const forEach = require('./forEach');
+import { forEach } from './forEach';
 
 const mockCallback = jest.fn(x => 42 + x);
 
