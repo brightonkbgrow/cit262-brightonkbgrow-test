@@ -1,12 +1,12 @@
 module.exports = {
+  transform: {
+    "^.+\\.js$": "babel-jest"
+  },
+  moduleFileExtensions: ["js"],
+  testEnvironment: "node",
   coverageThreshold: {
     global: {
-      lines: 50,
-    },
-  },
-  transform: {
-    "^.+\\.jsx?$": "babel-jest",
-  },
-  moduleFileExtensions: ["js", "jsx"],
-  testEnvironment: "node",
+      lines: 50
+    }
+  }
 };
