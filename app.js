@@ -24,25 +24,33 @@ new Vue({
         });
     },
 
-    addEvent: function () {
+    addEvent: async function () {
       if (this.event.title.trim()) {
-        this.$http.post('/api/events', this.event)
-          .success(function (res) {
-            this.events.push(this.event);
-            console.log('Event added!');
-          })
-          .error(function (err) {
-            console.log(err);
-          });
+
+        this.event.id = uuidv4();
+
+        try {
+
+          const params = {
+            TableName: 'EventsTable',
+            Item: this.event
+          };
+          await dynamodb.put(params).promise();
+
+          this.events.push(this.event);
+          console.log('Event added!');
+        } catch (err) {
+          console.error('Error saving event to DynamoDB', err);
+        }
       }
     },
 
     deleteEvent: function (id) {
-      if (confirm('Are you sure you want to delete this event?')) {        
+      if (confirm('Are you sure you want to delete this event?')) {
         this.$http.delete('api/events/' + id)
           .success(function (res) {
             console.log(res);
-            var index = this.events.find(x => x.id === id)
+            var index = this.events.findIndex(x => x.id === id);
             this.events.splice(index, 1);
           })
           .error(function (err) {

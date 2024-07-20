@@ -1,7 +1,8 @@
-export function forEach(items, callback) {
+function forEach(items, callback) {
 	for (const item of items) {
-		callback(items);
+	  callback(item);
 	}
-}
-
-
+  }
+  
+  module.exports = forEach;
+  

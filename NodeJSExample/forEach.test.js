@@ -18,4 +18,3 @@ test('forEach mock function', () => {
   expect(mockCallback.mock.results[0].value).toBe(42);
 });
 
-
