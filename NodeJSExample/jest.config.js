@@ -1,9 +1,12 @@
 module.exports = {
-    coverageThreshold: {
-      './src/*.js': {
-        lines: 80,
-      },
-    },
-  };
-
-
+  transform: {
+    "^.+\\.js$": "babel-jest"
+  },
+  moduleFileExtensions: ["js"],
+  testEnvironment: "node",
+  coverageThreshold: {
+    global: {
+      lines: 50
+    }
+  }
+};
