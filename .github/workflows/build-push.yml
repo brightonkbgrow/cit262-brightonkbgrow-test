@@ -4,6 +4,7 @@ on:
       - main
     types: [closed]
 
+
 jobs:
   check-coverage:
     if: github.event.pull_request.merged == true
