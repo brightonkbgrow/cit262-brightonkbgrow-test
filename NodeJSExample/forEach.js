@@ -1,7 +1,6 @@
+
 export function forEach(items, callback) {
-	for (const item of items) {
-		callback(items);
-	}
+  for (let i = 0; i < items.length; i++) {
+    callback(items[i], i);
+  }
 }
-
-
